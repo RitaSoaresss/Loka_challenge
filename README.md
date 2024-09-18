@@ -49,7 +49,7 @@ cd LOKA_CHALLENGE-pipeline
 conda env create -f environment.yml  # Create the environment from the environment.yml file
 conda activate your-env  # Activate the environment (replace 'your-env' with the actual environment name)
 ```
-5. Run the Pipeline:
+3. Run the Pipeline:
 ```
 snakemake --snakefile LOKA_CHALLENGE --config input=path/to/FASTQ output=path/to/results
 ```
