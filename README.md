@@ -3,7 +3,8 @@
 -Perturb-seq data examples:
 
 Inputs:
-Outouts:
+
+Outputs:
 
 -Instructions for installing dependencies:
 
