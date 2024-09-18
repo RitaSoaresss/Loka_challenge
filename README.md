@@ -38,3 +38,18 @@ B. Pull the images for the primary analysis (Alignment):
 C. Pull the images for the secondary analysis, as well as, install tools in R:
 
 # Running the pipeline
+
+1. Copy the code from GitHub repository to the local machine:
+´´´
+git clone https://github.com/ithub.com/RitaSoaresss/LOKA_CHALLENGE-pipeline.git
+cd LOKA_CHALLENGE-pipeline
+´´´
+2. Set Up the Conda Environment:
+´´´
+conda env create -f environment.yml  # Create the environment from the environment.yml file
+conda activate your-env  # Activate the environment (replace 'your-env' with the actual environment name)
+´´´
+3. Run the Pipeline:
+´´´
+snakemake --snakefile LOKA_CHALLENGE --config input=path/to/FASTQ output=path/to/results
+´´´
