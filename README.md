@@ -2,9 +2,9 @@
 
 -Instructions for installing dependencies:
 
-A.Install Snakemake
+A. Install Snakemake
 ```
-#Installation through Conda:
+#Instalation through Conda:
 #1. Install mamba:
 conda install -n base -c conda-forge mamba
 
@@ -15,4 +15,12 @@ mamba create -c conda-forge -c bioconda -n snakemake snakemake
 mamba activate snakemake
 snakemake --help
 ```
-B.Install tools for the primary analysis ()
+
+B. Pull the images for the primary analysis (Alignment):
+
+```
+#1.STAR alignment
+
+```
+
+C. Pull the images for the secondary analysis, as well as, install tools in R:
