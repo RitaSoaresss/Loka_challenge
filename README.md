@@ -9,6 +9,7 @@ Outputs:
 -Other important data:
 
 genome_dir: "path/to/genome"
+
 annotation_gtf: "path/to/annotations.gtf"
 
 -Instructions for installing dependencies:
