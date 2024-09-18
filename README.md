@@ -1,5 +1,10 @@
 # Loka_challenge
 
+-Perturb-seq data examples:
+
+Inputs:
+Outouts:
+
 -Instructions for installing dependencies:
 
 A. Install Snakemake
