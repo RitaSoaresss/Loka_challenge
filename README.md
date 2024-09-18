@@ -37,4 +37,4 @@ B. Pull the images for the primary analysis (Alignment):
 
 C. Pull the images for the secondary analysis, as well as, install tools in R:
 
-#Running the pipeline
+# Running the pipeline
