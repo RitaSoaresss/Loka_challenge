@@ -1,11 +1,17 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36" version="24.7.14">
   <diagram name="Página-1" id="tKrWnyHKtVhjj6xTfCoR">
-    <mxGraphModel dx="1290" dy="682" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1290" dy="682" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="YpY1-PrDq_Nd8Y185Px1-1" value="" style="shape=actor;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="120" y="110" width="40" height="50" as="geometry" />
+        <mxCell id="YpY1-PrDq_Nd8Y185Px1-1" value="" style="shape=actor;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="75" y="64" width="40" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="HrZToRPwhDLSEMCCm1qf-1" value="&lt;span lang=&quot;EN-US&quot; style=&quot;font-size:11.0pt;line-height:&lt;br/&gt;105%;font-family:&amp;quot;Aptos&amp;quot;,sans-serif;mso-fareast-font-family:Aptos;mso-bidi-font-family:&lt;br/&gt;&amp;quot;Times New Roman&amp;quot;;mso-ansi-language:EN-US;mso-fareast-language:EN-US;&lt;br/&gt;mso-bidi-language:AR-SA&quot;&gt;Genomics pipeline infrastructure for GeneXOmics&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240.000048828125" y="23.99998779296874" width="347" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="HrZToRPwhDLSEMCCm1qf-2" value="" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="31" y="49" width="80" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
