@@ -1,5 +1,0 @@
-samples:
-  - sample_1
-  - sample_2
-reference: "data/reference"
-annotation_gtf: "path/to/annotations.gtf"#maybe is not needed
