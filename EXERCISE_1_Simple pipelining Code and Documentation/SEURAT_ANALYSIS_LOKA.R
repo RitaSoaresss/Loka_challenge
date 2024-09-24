@@ -19,7 +19,7 @@ saveRDS(seurat, file=paste0("results/", gsub(".*\\/|\\_.*", "", matrix_file), "_
 seurat_obj <- readRDS(commandArgs(trailingOnly=TRUE)[1])
 
 # Perform differential expression analysis
-markers <- FindMarkers(seurat_obj, ident.1 = "condition1", ident.2 = "condition2")
+markers <- FindMarkers(seurat_obj, ident.1 = "NO PERTUBATIONS", ident.2 = "CHROMOSOME 8 ENHANCER PERTUBATIONS")
 
 # Save results
 write.csv(markers, file=paste0("results/", gsub(".*\\/|\\_.*", "", commandArgs(trailingOnly=TRUE)[1]), "_diff_expression.csv"))
