@@ -1,5 +1,7 @@
 samples:
   - sample_1
   - sample_2
+  - sample_3
+  - sample_4
 reference: "data/GRCh38.primary_assembly.genome.fa"
 annotation_gtf: "data/annotations/gencode.v40lift37.annotation.gtf"
