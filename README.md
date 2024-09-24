@@ -1,18 +1,12 @@
-# Loka_challenge
+## Loka_challenge
 
 *Exercise 1: Simple pipelining: Code and Documentation*
 
--Perturb-seq small test dataset to validate the pipeline, 2 fastq files control perturbations (SRR ;SRR )and 2 fastq files perturbations (SRR; SRR):
+# Perturb-seq small test dataset to validate the pipeline, 2 fastq files control (SRR9916603; SRR9916604) and 2 fastq files with chromosome 8 enhancer perturbations (SRR9916627; SRR9916628):
 
-Schraivogel, D., Gschwind, A. R., Milbank, J. H., Leonce, D. R., Jakob, P., Mathur, L., Korbel, J. O., Merten, C. A., Velten, L., & Steinmetz, L. M. (2020). Targeted Perturb-seq enables genome-scale genetic screens in single cells. Nature methods, 17(6), 629–635. https://doi.org/10.1038/s41592-020-0837-5
+Schraivogel, D., Gschwind, A. R., Milbank, J. H., Leonce, D. R., Jakob, P., Mathur, L., Korbel, J. O., Merten, C. A., Velten, L., & Steinmetz, L. M. (2020). Targeted Perturb-seq enables genome-scale genetic screens in single cells. Nature methods, 17(6), 629–635. https://doi.org/10.1038/s41592-020-0837-5 
 
--Other important data:
-
-genome_dir: "path/to/genome"
-
-annotation_gtf: "path/to/annotations.gtf"
-
--Instructions for installing dependencies:
+# Instructions for installing dependencies:
 
 A. Install Snakemake
 ```
