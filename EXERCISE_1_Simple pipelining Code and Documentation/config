@@ -1,5 +1,5 @@
 samples:
   - sample_1
   - sample_2
-reference: "data/reference"
-annotation_gtf: "path/to/annotations.gtf"#maybe is not needed
+reference: "data/GRCh38.primary_assembly.genome.fa"
+annotation_gtf: "data/annotations/gencode.v40lift37.annotation.gtf"
