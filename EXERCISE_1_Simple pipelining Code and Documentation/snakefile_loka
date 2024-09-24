@@ -8,8 +8,8 @@ configfile: "config.yaml"
 # Step 1: Quality Control:
 rule quality control:
     input:
-        read_1="data/raw_data.fastq"
-        read_2="data/raw_data.fastq"
+        read_1="data/raw_data_1.fastq"
+        read_2="data/raw_data_2.fastq"
     output:
         fastqc_dir="data/fastqc"
     shell:
@@ -23,7 +23,7 @@ rule quality control:
 # Step 2: Extract UMIs and barcodes from the reads using UMI-tools #WHAT ARE UMIS?#R: Unique molecular identifiers (UMIs) are a type of molecular barcoding that provides error correction and increased accuracy during sequencing. These molecular barcodes are short sequences used to uniquely tag each molecule in a sample library.
 rule umis_extraction:
     input:
-        read_1="data/raw_data.fastq"
+        read_1="data/raw_data_1.fastq"
         read_2="data/raw_data.fastq"
     output:
         read_1_extracted="data/UMIS/{sample}.fastq"
