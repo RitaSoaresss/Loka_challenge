@@ -3,8 +3,10 @@
 *Exercise 1: Simple pipelining: Code and Documentation*
 
 # Perturb-seq small test dataset to validate the pipeline, 2 fastq files control (SRR9916603; SRR9916604) and 2 fastq files with chromosome 8 enhancer perturbations (SRR9916627; SRR9916628):
-
+-ARTICLE:
 Schraivogel, D., Gschwind, A. R., Milbank, J. H., Leonce, D. R., Jakob, P., Mathur, L., Korbel, J. O., Merten, C. A., Velten, L., & Steinmetz, L. M. (2020). Targeted Perturb-seq enables genome-scale genetic screens in single cells. Nature methods, 17(6), 629–635. https://doi.org/10.1038/s41592-020-0837-5 
+
+-DOWNLOAD FASTQ FROM: https://www.ncbi.nlm.nih.gov/Traces/study/?acc=PRJNA559094&o=acc_s%3Aa&s=SRR9916613,SRR9916614,SRR9916627,SRR9916628,SRR9916603,SRR9916604 
 
 # Instructions for installing dependencies:
 
