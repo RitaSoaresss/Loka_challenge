@@ -22,14 +22,7 @@ mamba activate snakemake
 snakemake --help
 ```
 
-B. Pull the images for the primary analysis (Alignment):
-
-```
-#1.STAR alignment
-
-```
-
-C. Pull the images for the secondary analysis, as well as, install tools in R:
+B. Pull the images for the secondary analysis, as well as, install tools in R:
 
 # Running the pipeline
 
