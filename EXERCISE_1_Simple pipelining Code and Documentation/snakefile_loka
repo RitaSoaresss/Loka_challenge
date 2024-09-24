@@ -4,8 +4,23 @@ import os
 # Config
 configfile: "config.yaml"
 
-#PRIMARY ANALYSIS-RAW DATA PROCESSING (QUALITY CONTROL AND READ ALIGNMENT)-???????????????HAVE TO SEE IF WE NEED A TYPE OF QUALITY CONTROL STEP HERE, SOMEHOW?????????????????????
-# Step 1: Extract UMIs and barcodes from the reads using UMI-tools #WHAT ARE UMIS?#R: Unique molecular identifiers (UMIs) are a type of molecular barcoding that provides error correction and increased accuracy during sequencing. These molecular barcodes are short sequences used to uniquely tag each molecule in a sample library.
+#PRIMARY ANALYSIS-RAW DATA PROCESSING (QUALITY CONTROL AND READ ALIGNMENT)
+# Step 1: Quality Control:
+rule quality control:
+    input:
+        read_1="data/raw_data.fastq"
+        read_2="data/raw_data.fastq"
+    output:
+        fastqc_dir="data/fastqc"
+    shell:
+        """
+        fastp --thread 40 \
+              --i={input.read_1} \
+              --I={input.read_2} \
+              -O={output.fastqc_dir}
+        """
+
+# Step 2: Extract UMIs and barcodes from the reads using UMI-tools #WHAT ARE UMIS?#R: Unique molecular identifiers (UMIs) are a type of molecular barcoding that provides error correction and increased accuracy during sequencing. These molecular barcodes are short sequences used to uniquely tag each molecule in a sample library.
 rule umis_extraction:
     input:
         read_1="data/raw_data.fastq"
@@ -20,7 +35,7 @@ rule umis_extraction:
                           --read2-in={input.read_2} --read2-out={output.read_2_extracted}
         """
 
-# Step 2: Align reads with STAR Alignment with reference genome GRCH38
+# Step 3: Align reads with STAR Alignment with reference genome GRCH38
 rule align_reads:
     input:
         UMI_1="data/UMIS/{sample}.fastq"
@@ -28,7 +43,7 @@ rule align_reads:
     output:
         bam="results/alignment/{sample}_aligned.bam"
     params:
-        reference_genome=config["genome_dir"]
+        reference_genome=config["genome_dir"] #reference genome GRCH38
     shell:
         """
         STAR --runThreadN 4 \
@@ -43,7 +58,7 @@ rule align_reads:
         mv {wildcards.sample}Aligned.sortedByCoord.out.bam {output}
         """
 
-# Step 3: Count UMIS and create a gene expression matrix with them
+# Step 4: Count UMIS and create a gene expression matrix with them
 rule count_umis:
     input:
         bam = "results/alignment/{sample}_aligned.bam"
@@ -56,7 +71,7 @@ rule count_umis:
         """
 
 ###############################################################################################START OF SECONDARY ANALYSIS###############################
-# Step 4: Perform secondary analysis with Seurat (R) - BOTH PRE-PROCESSING/NORMALIZE THE DATA AND PERFORM DIFFERENTIAL EXPRESSION ANALYSIS
+# Step 5: Perform secondary analysis with Seurat (R) - BOTH PRE-PROCESSING/NORMALIZE THE DATA AND PERFORM DIFFERENTIAL EXPRESSION ANALYSIS
 rule seurat_analysis:
     input:
         "results/{sample}_counts.tsv"
